@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>کافه کامه | چیزکیک‌های خانگی تازه</title>
+    <!-- Google Fonts - Vazirmatn for modern Persian typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Vazirmatn", "Inter", system-ui, sans-serif;
+        background: #fefaf5;
+        color: #2c2418;
+        line-height: 1.55;
+        scroll-behavior: smooth;
+      }
+
+      /* smooth container */
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      /* header / nav */
+      .site-header {
+        padding: 20px 0 16px;
+        background: rgba(255, 250, 240, 0.96);
+        backdrop-filter: blur(6px);
+        border-bottom: 2px solid #fbead5;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        background: linear-gradient(135deg, #c27e4a, #b45a2e);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .logo span {
+        font-size: 1.4rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        font-weight: 500;
+        color: #6b4c2c;
+        transition: 0.2s;
+        font-size: 1rem;
+      }
+
+      .nav-links a:hover {
+        color: #b45a2e;
+        border-bottom: 2px solid #e7b183;
+        padding-bottom: 4px;
+      }
+
+      /* hero */
+      .hero {
+        padding: 60px 0 40px;
+        background: linear-gradient(120deg, #fff7ef, #fff3e8);
+      }
+
+      .hero-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-content {
+        flex: 1.2;
+      }
+
+      .hero-badge {
+        background: #f5e2ce;
+        display: inline-block;
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #aa6e3e;
+        margin-bottom: 24px;
+      }
+
+      .hero-content h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: 20px;
+        color: #4f2d17;
+      }
+
+      .hero-desc {
+        font-size: 1.2rem;
+        color: #5e3e24;
+        max-width: 500px;
+        margin-bottom: 32px;
+        border-right: 3px solid #e7bc91;
+        padding-right: 20px;
+      }
+
+      .hero-visual {
+        flex: 0.9;
+        background: #fff1e2;
+        border-radius: 64px;
+        padding: 24px;
+        text-align: center;
+        box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+      }
+
+      .hero-visual svg {
+        max-width: 100%;
+      }
+
+      /* section styles */
+      section {
+        padding: 70px 0;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 16px;
+        color: #4f2d17;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+      }
+      .section-title:after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 3px;
+        background: #e7bc91;
+        margin: 12px auto 0;
+        border-radius: 4px;
+      }
+
+      .section-sub {
+        text-align: center;
+        color: #7c5a3c;
+        margin-bottom: 48px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* features grid */
+      .features-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 36px;
+        padding: 28px 20px;
+        flex: 1 1 200px;
+        text-align: center;
+        box-shadow:
+          0 6px 14px rgba(0, 0, 0, 0.02),
+          0 1px 3px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f5e3d2;
+        transition: all 0.25s;
+      }
+      .feature-card:hover {
+        transform: translateY(-6px);
+        border-color: #e7bc91;
+        box-shadow: 0 20px 25px -12px rgba(160, 100, 40, 0.1);
+      }
+      .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 18px;
+      }
+      .feature-card h3 {
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      /* flavors */
+      .flavors-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 30px 0 10px;
+      }
+      .flavor-tag {
+        background: #fcf3e9;
+        padding: 12px 28px;
+        border-radius: 60px;
+        font-weight: 600;
+        color: #aa6e3e;
+        font-size: 1.1rem;
+        border: 1px solid #f3e0ce;
+        transition: 0.1s;
+      }
+      .flavor-tag:hover {
+        background: #e7bc91;
+        color: white;
+      }
+
+      /* partnership section - main info */
+      .partnership-box {
+        background: #fffaf2;
+        border-radius: 48px;
+        padding: 40px 36px;
+        margin-top: 20px;
+        border: 1px solid #f7e5d4;
+      }
+      .info-block {
+        margin-bottom: 36px;
+      }
+      .info-block h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #8b5a33;
+        border-right: 4px solid #e7bc91;
+        padding-right: 20px;
+        margin-bottom: 20px;
+      }
+      .info-list {
+        list-style: none;
+        padding-right: 20px;
+      }
+      .info-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .info-list li strong {
+        min-width: 110px;
+        color: #5a3a22;
+      }
+      .price-table {
+        background: white;
+        border-radius: 28px;
+        padding: 20px;
+        margin: 24px 0;
+        border: 1px solid #f1e1cf;
+      }
+      .price-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px dashed #eedbcb;
+      }
+      .price-row:last-child {
+        border: none;
+      }
+      .price-label {
+        font-weight: 700;
+        color: #6c421f;
+      }
+      .price-value {
+        color: #a65728;
+        font-weight: 600;
+        direction: ltr;
+        display: inline-block;
+      }
+      .contact-card {
+        background: #fff7ef;
+        border-radius: 32px;
+        padding: 32px;
+        text-align: center;
+        margin-top: 30px;
+        border: 1px solid #f0ddca;
+      }
+      .phone-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        direction: ltr;
+        display: inline-block;
+        background: #efdbc9;
+        padding: 12px 32px;
+        border-radius: 60px;
+        color: #4f2d17;
+        margin-top: 12px;
+      }
+      .btn-whatsapp {
+        background: #b45a2e;
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 40px;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 24px;
+        cursor: pointer;
+        transition: 0.2s;
+        display: inline-block;
+        text-decoration: none;
+      }
+      .btn-whatsapp:hover {
+        background: #8e451f;
+        transform: scale(1.02);
+      }
+      footer {
+        background: #faf0e6;
+        text-align: center;
+        padding: 32px 0;
+        color: #7a5a3e;
+        border-top: 1px solid #eedbcb;
+        font-size: 0.85rem;
+      }
+      @media (max-width: 700px) {
+        .hero-content h1 {
+          font-size: 2.2rem;
+        }
+        .partnership-box {
+          padding: 24px 20px;
+        }
+        .price-row {
+          flex-direction: column;
+          gap: 6px;
+        }
+        .container {
+          padding: 0 20px;
+        }
+        .nav-links {
+          gap: 16px;
+        }
+        .logo {
+          font-size: 1.4rem;
+        }
+      }
+      .highlight {
+        background: #ffe6d5;
+        border-radius: 12px;
+        padding: 2px 8px;
+      }
+      hr {
+        margin: 20px 0;
+        border-color: #f1e2d2;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">🍰 چیزکیک‌های خانگی <span>کامه</span></div>
+        <div class="nav-links">
+          <a href="#home">خانه</a>
+          <a href="#features">ویژگی‌ها</a>
+          <a href="#flavors">طعم‌ها</a>
+          <a href="#partnership">همکاری</a>
+          <a href="#contact">تماس</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">✨ دسر تازه، بدون نگهدارنده ✨</div>
+            <h1>چیزکیک‌های خانگیِ کامه</h1>
+            <p class="hero-desc">
+              دسر تازه و بدون نگهدارنده برای کافه‌ی قشنگ شما 🌸
+            </p>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap">
+              <a
+                href="#partnership"
+                class="btn-whatsapp"
+                style="background: #b45a2e; margin-top: 0"
+                >شروع همکاری شیرین →</a
+              >
+              <a
+                href="#contact"
+                class="btn-whatsapp"
+                style="background: #d6996e; margin-top: 0"
+                >تماس بگیرید</a
+              >
+            </div>
+          </div>
+          <div class="hero-visual">
+            <svg
+              width="220"
+              height="180"
+              viewBox="0 0 240 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="70"
+                y="40"
+                width="100"
+                height="100"
+                rx="30"
+                fill="#F8E0C0"
+                stroke="#C28A5C"
+                stroke-width="2"
+              />
+              <path
+                d="M120 70 L140 100 L100 100 Z"
+                fill="#E7B183"
+                stroke="#B45A2E"
+                stroke-width="1.5"
+              />
+              <circle
+                cx="120"
+                cy="130"
+                r="18"
+                fill="#FFE1B3"
+                stroke="#C27E4A"
+                stroke-width="1.8"
+              />
+              <circle cx="90" cy="170" r="10" fill="#FCD5A5" />
+              <circle cx="150" cy="170" r="10" fill="#FCD5A5" />
+              <path
+                d="M100 180 L140 180"
+                stroke="#B45A2E"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ویژگی‌ها -->
+      <section id="features">
+        <div class="container">
+          <h2 class="section-title">✨ ویژگی‌های خاص چیزکیک کامه ✨</h2>
+          <div class="section-sub">
+            تولید روزانه با تازه‌ترین مواد اولیه، بدون هیچ نگهدارنده
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🥛</div>
+              <h3>خامه و پنیر تازه</h3>
+              <p>مرغوب‌ترین لبنیات روز</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">❄️</div>
+              <h3>ماندگاری ۴۸ ساعت</h3>
+              <p>در یخچال، طراوت همیشگی</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎂</div>
+              <h3>ظاهر شیک</h3>
+              <p>مناسب برای سرو و کافه شما</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📦</div>
+              <h3>سفارش انعطاف‌پذیر</h3>
+              <p>قالب‌های مختلف و بسته‌بندی اختصاصی</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- انواع طعم‌ها -->
+      <section id="flavors" style="padding-top: 20px">
+        <div class="container">
+          <h2 class="section-title">🍫 طعم‌های بهشتی 🍑</h2>
+          <div class="section-sub">
+            انتخاب ویژه برای سلیقه‌های متفاوت کافه شما
+          </div>
+          <div class="flavors-grid">
+            <div class="flavor-tag">🍫 شکلاتی مخصوص</div>
+            <div class="flavor-tag">🍑 هلو</div>
+            <div class="flavor-tag">🍓 توت‌فرنگی</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- شرایط همکاری + مدل‌ها + هزینه‌ها (جزئیات کامل) -->
+      <section id="partnership">
+        <div class="container">
+          <h2 class="section-title">📦 همکاری با کافه کامه</h2>
+          <div class="partnership-box">
+            <!-- شرایط همکاری -->
+            <div class="info-block">
+              <h3>📋 شرایط همکاری</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>📌 حداقل سفارش:</strong> ۱۲ عدد کیک بسته‌بندی شده
+                  تک‌نفره <strong>یا</strong> یک کیک کامل در قالب با اندازه‌ی
+                  مورد نظر
+                </li>
+                <li>
+                  <strong>💳 روش پرداخت:</strong> ۵۰٪ پیش‌پرداخت، ۵۰٪ هنگام
+                  تحویل
+                </li>
+                <li>
+                  <strong>🚚 زمان تحویل:</strong> روزانه از ساعت ۱۱ صبح به بعد،
+                  درب کافه
+                </li>
+              </ul>
+            </div>
+
+            <!-- مدل‌های همکاری : هفتگی و روزانه -->
+            <div class="info-block">
+              <h3>📝 مدل‌های همکاری</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>🗓️ هفتگی:</strong> برای برنامه‌ریزی بهتر و تضمین
+                  موجودی، ۴۸ ساعت قبل از شروع هفته مورد نظر، مقدار دلخواه (مثلاً
+                  روزانه ۲۰ عدد چیزکیک شکلاتی تک‌نفره یا روزانه یک کیک کامل) رو
+                  اعلام کنین. ما در طول هفته، روزانه محصولات تازه را برای شما
+                  آماده و تحویل خواهیم داد.
+                </li>
+                <li>
+                  <strong>☀️ روزانه:</strong> برای سفارش‌های خاص یا روزانه،
+                  حداقل ۴۸ ساعت قبل از تاریخ مورد نظر، مقدار رو مشخص کنین.
+                  چیزکیک های خوشمزه و تازه شما در همان روز صبح تحویل داده خواهند
+                  شد.
+                </li>
+              </ul>
+            </div>
+
+            <!-- هزینه‌ها با جزئیات کامل (مطابق متن) -->
+            <div class="info-block">
+              <h3>💰 تعرفه‌ها (هزینه)</h3>
+              <div class="price-table">
+                <div class="price-row">
+                  <span class="price-label"
+                    >🍰 کیک بسته‌بندی شده تک‌نفره (معادل ۱۵۰ گرم)</span
+                  ><span class="price-value">۸۵,۰۰۰ تومان</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label"
+                    >🎂 کیک کامل با ارتفاع X در قالب ۲۵ سانتی‌متر</span
+                  ><span class="price-value">۴۸۰,۰۰۰ تومان</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label"
+                    >🎂 کیک کامل با ارتفاع Y در قالب ۲۵ سانتی‌متر</span
+                  ><span class="price-value">۵۴۰,۰۰۰ تومان</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label"
+                    >🍰 کیک کامل با ارتفاع X در قالب ۲۰ سانتی‌متر</span
+                  ><span class="price-value">۳۹۰,۰۰۰ تومان</span>
+                </div>
+                <div class="price-row">
+                  <span class="price-label"
+                    >🍰 کیک کامل با ارتفاع Y در قالب ۲۰ سانتی‌متر</span
+                  ><span class="price-value">۴۳۰,۰۰۰ تومان</span>
+                </div>
+              </div>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: #8b5a33;
+                  background: #fff2e8;
+                  padding: 10px 16px;
+                  border-radius: 24px;
+                "
+              >
+                * قیمت‌ها بر اساس وزن نهایی و مواد اولیه به‌روز محاسبه می‌شود.
+                لطفاً برای سفارش دقیق با ما تماس بگیرید.
+              </p>
+            </div>
+
+            <!-- هدف و لبخند رضایت -->
+            <div
+              class="info-block"
+              style="
+                background: #fff7ef;
+                border-radius: 28px;
+                padding: 20px;
+                text-align: center;
+              "
+            >
+              <p style="font-size: 1.15rem; font-weight: 500">
+                🎯 هدف ما لبخند رضایت شما و مشتریانتان است؛ مشتاقانه منتظر شروع
+                همکاری‌های شیرین با شما هستیم! 😊
+              </p>
+            </div>
+
+            <!-- تماس و شماره -->
+            <div id="contact" class="contact-card">
+              <h3 style="font-size: 1.7rem; margin-bottom: 12px">
+                📞 تماس با ما
+              </h3>
+              <p>
+                برای ثبت سفارش، همکاری یا مشاوره رایگان با ما در ارتباط باشید:
+              </p>
+              <div class="phone-number">📱 ۰۹۹۲ ۱۲۳ ۴۵۶۷</div>
+              <p style="margin-top: 18px; font-size: 0.9rem">
+                (شماره تماس مستقیم : 0992 123 4567)
+              </p>
+              <a
+                href="tel:09921234567"
+                class="btn-whatsapp"
+                style="display: inline-block"
+                >📞 تماس بگیرید</a
+              >
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  margin-right: 12px;
+                  background: #75a03b;
+                  padding: 12px 28px;
+                  border-radius: 40px;
+                  color: white;
+                  text-decoration: none;
+                  margin-top: 14px;
+                "
+                >💬 واتساپ / تلگرام</a
+              >
+              <p style="margin-top: 22px">
+                ✨ آماده تحویل روزانه از ساعت ۱۱ صبح به بعد، درب کافه شما ✨
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- یادآوری اضافه برای جزئیات تحویل و هدف -->
+      <section style="padding: 20px 0 60px">
+        <div class="container">
+          <div
+            style="
+              background: #fff4ea;
+              border-radius: 40px;
+              padding: 28px 32px;
+              text-align: center;
+            "
+          >
+            <p style="font-size: 1.1rem">
+              🍰 <strong>تولید روزانه با خامه و پنیر تازه</strong> — بدون
+              نگهدارنده، ماندگاری ۴۸ ساعت در یخچال. <br />
+              ظاهری شیک و سرو بی‌نظیر، همراه با بسته‌بندی اختصاصی برای کافه شما.
+            </p>
+            <hr style="margin: 16px auto; width: 80px" />
+            <p>
+              📌 حداقل سفارش یادآوری: ۱۲ عدد کیک تک‌نفره یا یک کیک کامل در هر
+              قالبی که انتخاب می‌کنید. تمامی سفارش‌ها با ۵۰٪ پیش‌پرداخت تضمین
+              می‌شود.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          ✨ چیزکیک‌های خانگی کامه — دسر تازه، عاشقانه و بدون نگهدارنده برای
+          کافه قشنگ شما ✨
+        </p>
+        <p style="margin-top: 8px">
+          © ۲۰۲۶ کلیه حقوق محفوظ است | شماره تماس: ۰۹۹۲۱۲۳۴۵۶۷ | تولید روزانه با
+          تازه‌ترین مواد
+        </p>
+      </div>
+    </footer>
+
+    <!-- smooth scroll script for RTL navigation -->
+    <script>
+      (function () {
+        const links = document.querySelectorAll(".nav-links a");
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId && targetId !== "#") {
+              const targetElem = document.querySelector(targetId);
+              if (targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            }
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
